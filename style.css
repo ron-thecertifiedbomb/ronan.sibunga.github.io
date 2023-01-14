@@ -14,13 +14,12 @@
   
 }
 
-
 .hero-heading-one {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
-  line-height: 20px;
+  line-height: 50px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #000000;
@@ -31,14 +30,11 @@
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 5px;
   color: #000000;
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
-
-
-
 
 h6 {
   font-family: 'Poppins';
@@ -104,15 +100,15 @@ img {
 @media only screen and (max-width: 1282px) {
   .hero-heading-one {
     font-size: 50px;
+    line-height: 40px;
   }
-
 }
-
-
 
 @media only screen and (max-width: 414px) {
   .hero-heading-one {
     font-size: 35px;
+
+    line-height: 20px
   }
   .hero-heading-two {
     font-size: 20px;
@@ -127,7 +123,6 @@ img {
  display: none;
   }
     
-
   .hero-wrapper {
    flex-direction: column;
   }
@@ -141,7 +136,6 @@ img {
   .hero-heading-two {
     font-size: 20px;
   }
-
   .hero-column-one {
     justify-content: center;
   align-content: center;
@@ -149,10 +143,5 @@ img {
   height: 500px;
   }
     
-    
-
-  .hero-wrapper {
-   flex-direction: column;
-  }
 }
 
