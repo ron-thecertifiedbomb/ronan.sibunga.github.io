@@ -25,6 +25,7 @@ body {
   background-color: var(--bgdarktmode);
   color: var(--ligthmode-text);
   background-color: var(--bglightmode);
+  /* text-align: center; */
 }
 
 .hero-heading-one {
@@ -211,8 +212,8 @@ img {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 60px;
+  text-align: center;
 }
-
 
 
 /* Media Queries */
