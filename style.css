@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:wght@400;700&display=swap');
+
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -11,26 +12,26 @@
   --text: #000000;
   --hero-h1-font-weight: 700px;
   --hero-h1-font-size: 60px;
-  
+
 }
 
 .hero-heading-one {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  font-size: 60px;
-  line-height: 50px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 35px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #000000;
 }
 
-.hero-heading-two{
+.hero-heading-two {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 5px;
+  line-height: 0px;
   color: #000000;
   letter-spacing: 0.01em;
   text-transform: uppercase;
@@ -58,6 +59,7 @@ h6:hover {
 
 .hero-section {
   padding-top: 80px;
+  margin-bottom: 10px;
 }
 
 .hero-wrapper {
@@ -69,27 +71,26 @@ h6:hover {
 }
 
 .hero-column-one {
-display: flex;
-flex-basis: 50%;
-flex-direction: column;
-align-content: center;
-justify-content: center;
-/* background-color: aqua; */
-max-width: 648px;
-padding: 10px;
-min-height: 500px;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  max-width: 648px;
+  padding: 10px;
+  min-height: 500px;
 }
+
 .hero-column-two {
-display: flex;
-flex-basis: 50%;
-flex-direction: column;
-align-content: center;
-justify-content: center;
-align-items: center;
-/* background-color: aqua; */
-max-width: 648px;
-padding: 10px;
-min-height: 500px;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 648px;
+  padding: 10px;
+  min-height: 500px;
 }
 
 img {
@@ -97,61 +98,82 @@ img {
   max-height: 100%;
 }
 
+/* Lizard Interactive Cards Section  */
+
+.carousel-container {
+  max-width: 1300px;
+  height: auto;
+  display: flex;
+  gap: 30px;
+  /* background-color: aqua; */
+  margin: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.card-version-three {
+  max-width: 300px;
+  width: 100%;
+  min-height: 300px;
+  border: 0.5px solid #C1C1C1;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+
 @media only screen and (max-width: 1282px) {
   .hero-heading-one {
-    font-size: 45px;
-    line-height: 40px;
+    line-height: 30px;
   }
 }
+
 @media only screen and (max-width: 980px) {
   .hero-heading-one {
-    font-size: 40px;
-    line-height: 40px;
+    line-height: 30px;
   }
-}
-@media only screen and (max-width: 874px) {
-  .hero-heading-one {
-    font-size: 35px;
-    line-height: 40px;
+
+  .hero-heading-two {
+    line-height: 0px;
+
   }
 }
 
 @media only screen and (max-width: 428px) {
   .hero-heading-one {
-    font-size: 35px;
-    line-height: 20px
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 25px;
   }
-  .hero-heading-two {
-    font-size: 20px;
-  }
-  .hero-column-one {
-    justify-content: center;
-  align-content: center;
-  align-items: center; 
-  }
+
   .hero-column-two {
- display: none;
+    display: none;
   }
-  .hero-wrapper {
-   flex-direction: column;
-   height: 100vh;
-  }
-}
 
-@media only screen and (max-width: 375px) {
-  .hero-heading-one {
-    font-size: 30px;
-  }
-  .hero-heading-two {
-    font-size: 20px;
-  }
   .hero-column-one {
+    width: 100%;
+    height: 100%;
     justify-content: center;
-  align-content: center;
-  align-items: center; 
-  height: 100%;
-
+    align-content: center;
+    align-items: center;
+    /* background-image: url(./img/xboxseriesx.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; */
   }
-    
-}
 
+  .hero-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+}
