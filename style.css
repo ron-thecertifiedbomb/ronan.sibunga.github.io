@@ -25,7 +25,7 @@ body {
   background-color: var(--bgdarktmode);
   color: var(--ligthmode-text);
   background-color: var(--bglightmode);
-  /* text-align: center; */
+  text-align: center;
 }
 
 .hero-heading-one {
