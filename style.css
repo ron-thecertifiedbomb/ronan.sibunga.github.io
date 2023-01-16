@@ -5,14 +5,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 :root {
-  --bg: #ffffff;
-  --text: #000000;
+  --bglightmode: #ffffff;
+  --bgdarktmode: #000000;
+  --darkmode-text: #ffffff;
+  --ligthmode-text: #000000;
+  --font-button-hover: #ffffff;
+  --card-button-hover: rgb(0, 0, 0);
   --hero-h1-font-weight: 700px;
   --hero-h1-font-size: 60px;
+  --card-button: #D9D9D9;
+}
 
+body {
+  color: var(--darkmode-text);
+  background-color: var(--bgdarktmode);
+  color: var(--ligthmode-text);
+  background-color: var(--bglightmode);
+  text-align: center;
 }
 
 .hero-heading-one {
@@ -23,7 +36,6 @@
   line-height: 35px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: #000000;
 }
 
 .hero-heading-two {
@@ -32,7 +44,6 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 0px;
-  color: #000000;
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
@@ -42,8 +53,8 @@ h6 {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 28px;
   color: #000000;
+  line-height: 28px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -59,7 +70,7 @@ h6:hover {
 
 .hero-section {
   padding-top: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 90px;
 }
 
 .hero-wrapper {
@@ -152,45 +163,56 @@ img {
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
-  /* identical to box height, or 183% */
-
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 
-.card-bottom-content{
+.card-bottom-content {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
-  
-}
 
+}
 
 .button {
   width: 85px;
   height: 35px;
-  background: #D9D9D9;
+  background: var(--card-button);
   border-radius: 4px;
   border: none;
   display: flex;
   justify-content: center;
   align-content: center;
   cursor: pointer;
-  
 }
 
 .card-order-button {
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 28px;
-letter-spacing: 0.01em;
-text-transform: uppercase;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
 }
 
 
+.button:hover {
+  background-color: var(--card-button-hover);
+  color: var(--font-button-hover);
+}
 
+/* Lizard Interactive Latest Consoles and  Section */
+
+.heading-one {
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1rem, 5vw, 2rem);
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
 
 
 
@@ -206,16 +228,17 @@ text-transform: uppercase;
   .hero-heading-one {
     line-height: 30px;
   }
-
   .hero-heading-two {
     line-height: 0px;
+  }
 
+  .hero-section {
+    margin-bottom: 10px;
   }
 }
 
 @media only screen and (max-width: 428px) {
   .hero-heading-one {
-    font-size: clamp(2rem, 5vw, 3.5rem);
     line-height: 25px;
   }
 
@@ -229,15 +252,14 @@ text-transform: uppercase;
     justify-content: center;
     align-content: center;
     align-items: center;
-    /* background-image: url(./img/xboxseriesx.png);
+    background-image: url(./img/xboxseriesx.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; */
+    background-size: contain;
   }
 
   .hero-wrapper {
     flex-direction: column;
     height: auto;
   }
-
 }
