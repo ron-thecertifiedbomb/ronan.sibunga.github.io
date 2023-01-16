@@ -215,6 +215,29 @@ img {
 }
 
 
+/* Lizard Interactive Slideshow Section  */
+.slideshow-section {
+  width: 100%;
+  height: auto;
+}
+
+
+.slideshow-container {
+  max-width: 1300px;
+  height: auto;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Media Queries */
 
 @media only screen and (max-width: 1282px) {
@@ -227,6 +250,7 @@ img {
   .hero-heading-one {
     line-height: 30px;
   }
+
   .hero-heading-two {
     line-height: 0px;
   }
@@ -234,6 +258,19 @@ img {
   .hero-section {
     margin-bottom: 10px;
   }
+
+
+  .slideshow-section {
+    background-color: red;
+  }
+
+
+
+
+
+
+
+
 }
 
 @media only screen and (max-width: 428px) {
