@@ -60,6 +60,7 @@ h6 {
 
 h6:hover {
   color: rgb(131, 131, 131);
+  
 }
 
 .navbar {
@@ -229,6 +230,7 @@ img {
 
 
 .button:hover {
+  transition: transform .5s ease;
   background-color: var(--card-button-hover);
   color: var(--font-button-hover);
 }
@@ -285,6 +287,14 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 border-radius: 22px;
 text-align: center;
 padding: 19px 15px 19px 18px;
+transition: transform .7s ease;
+
+}
+
+.card-version-two:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
 }
 
 .card-content {
@@ -341,7 +351,7 @@ padding: 19px 15px 19px 18px;
    flex-direction: column;
    padding-left: 1rem;
    padding-right: 1rem;
-   gap: 10px;
+   gap: 25px;
    justify-content: center;
    align-items: center;
    
