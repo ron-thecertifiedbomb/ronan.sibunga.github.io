@@ -164,7 +164,20 @@ img {
   border-radius: 13px;
   overflow: hidden;
   padding: 15px;
+transition: transform .7s ease;
+
 }
+
+.card-version-three:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+
+
+
+
 
 .card-heading {
   font-family: 'Poppins';
