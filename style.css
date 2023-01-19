@@ -144,7 +144,7 @@ img {
 
 /* Lizard Interactive Cards Section  */
 
-.carousel-container {
+.store-cards-container {
   max-width: 1300px;
   height: auto;
   display: flex;
@@ -154,7 +154,7 @@ img {
   flex-wrap: wrap;
 }
 
-.card-version-three {
+.card-container {
   max-width: 300px;
   width: 100%;
   min-height: 300px;
@@ -166,7 +166,7 @@ img {
   transition: transform .7s ease;
 }
 
-.card-version-three:hover {
+.card-container:hover {
   -ms-transform: scale(1.1);
   /* IE 9 */
   -webkit-transform: scale(1.1);
