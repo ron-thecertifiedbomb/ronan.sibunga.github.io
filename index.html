@@ -62,7 +62,7 @@
 
   <!-- Lizard Interactive Hero Section -->
 
-  <section class="hero-section">
+  <!-- <section class="hero-section">
 
     <div class="hero-wrapper">
       <div class="hero-column-one">
@@ -70,14 +70,14 @@
         <p class="hero-heading-two">Online Store</p>
       </div>
       <div class="hero-column-two">
-        <!-- <img src="./img/hero/xbox.png" alt="hero" width="500">
+       <img src="./img/hero/xbox.png" alt="hero" width="500">
         <img src="./img/hero/ps5.png" alt="hero" width="500"> -->
         <!-- <img src="./img/hero/switch.png" alt="hero" width="500"> -->
 
 
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Lizard Interactive Latest Consoles and  Section -->
 
@@ -86,7 +86,7 @@
   </p>
 
  <!-- Lizard Interactive Slideshow PS Section -->
- <section class="slideshow-section" id="playstation">
+ <!-- <section class="slideshow-section" id="playstation">
 
   <div class="slideshow-container">
 
@@ -117,16 +117,21 @@
       </button>
     </div>
   </div>
-</section>
+</section> -->
 
 
   <!-- Lizard Interactive Cards/Carousel Section -->
 
+<!-- 
   <section class="carousel-section">
     <div class="carousel-container">
 
       <div class="card-version-three">
-        <img src="./img/cards/ps4.png" alt="hero" width="300">
+
+        <div class="image-box" id="item-one">
+aasdsad
+      </div>
+
 
         <p class="card-heading">
           PS 5 consoles
@@ -139,17 +144,21 @@
           <p class="card-price">
             PhP 15,000.00
           </p>
-          <div class="button">
+          <div class="button" onclick="createNewItem()">
             <p class="card-order-button">
               order
             </p>
           </div>
         </div>
-
       </div>
 
       <div class="card-version-three">
-        <img src="./img/cards/ps2.png" alt="hero" width="300">
+
+        <div class="image-box" id="item-two">
+       dsdsdsd
+       
+        </div>
+
         <p class="card-heading">
           accessories
         </p>
@@ -161,7 +170,7 @@
           <p class="card-price">
             PhP 15,000.00
           </p>
-          <div class="button">
+          <div class="button" onclick="createNewItemXbox()">
             <p class="card-order-button">
               order
             </p>
@@ -170,7 +179,9 @@
       </div>
 
       <div class="card-version-three">
-        <img src="./img/cards/ps3.png" alt="hero" width="300">
+        <div class="image-box" id="item-three">
+addasdas
+          
         <p class="card-heading">
           PS5 controllers
         </p>
@@ -182,7 +193,7 @@
           <p class="card-price">
             PhP 15,000.00
           </p>
-          <div class="button">
+          <div class="button" onclick="createNewItemSwitch()">
             <p class="card-order-button">
               order
             </p>
@@ -190,31 +201,62 @@
         </div>
       </div>
 
-      <div class="card-version-three">
-        <img src="./img/cards/ps1.png" alt="hero" width="300">
-        <p class="card-heading">
-          free online membership
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
+  </section> -->
 
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
-        </div>
+
+
+  <div class="modal-cart" id ='card-container'>
+  </div>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Cart</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-  </section>
+      <div class="modal-body">
+
+        <div class="list-cart" id ='list-box'>
+   
+        </div>
+
+
+      </div>
+
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- Lizard Interactive Slideshow XBOX Section -->
 
-  <section class="slideshow-section" id="xbox">
+  <!-- <section class="slideshow-section" id="xbox">
 
     <div class="slideshow-container">
   
@@ -336,11 +378,11 @@
           </div>
         </div>
       </div>
-  </section>
+  </section> -->
 
 <!-- Lizard Interactive Slideshow Nintendo Section -->
 
-  <section class="slideshow-section" id="switch">
+  <!-- <section class="slideshow-section" id="switch">
 
     <div class="slideshow-container">
   
@@ -372,25 +414,17 @@
       </div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-
+ -->
 
   <!-- Lizard Interactive Card Two Section -->
 
-  <section class="card-two">
+  <!-- <section class="card-two">
     <div class="card-two-container">
-      <div class="card-version-two">
+      <div class="card-version-two"> -->
         <!-- <img src="./img/cardtwo/Nintendo.png" alt="nintendo"> -->
-    <img src="./img/cardtwo/NintendoPS.png" alt="nintendo"> 
+    <!-- <img src="./img/cardtwo/NintendoPS.png" alt="nintendo">  -->
         <!-- <img src="./img/cardtwo/NintendoLarge.png" alt="nintendo" width="280"> -->
-        <div class="card-content">
+        <!-- <div class="card-content">
           <p class="card-heading">
             nintendo switch
           </p>
@@ -414,13 +448,13 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
 
-      <div class="card-version-two">
-        <img src="./img/cardtwo/NintendoSwtich.png" alt="nintendo">
-    <!-- <img src="./img/cardtwo/NintendoPS.png" alt="nintendo"> --> 
+      <!-- <div class="card-version-two">
+        <img src="./img/cardtwo/NintendoSwtich.png" alt="nintendo"> -->
+        <!-- <img src="./img/cardtwo/NintendoPS.png" alt="nintendo"> --> 
         <!-- <img src="./img/cardtwo/NintendoLarge.png" alt="nintendo" width="287"> -->
-        <div class="card-content">
+        <!-- <div class="card-content">
           <p class="card-heading">
             nintendo switch
           </p>
@@ -444,7 +478,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>

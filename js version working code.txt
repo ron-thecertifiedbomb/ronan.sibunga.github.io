@@ -4,7 +4,8 @@ var psPrice = [ 15000, 20000, 10000, 50000 ]
 var psItem = [ 'PLAYSTATION 5 CONSOLES', 'ACCESSORIES', 'PS5 CONTROLLERS', 'MEMBERSHIP' ]
 var  nintendoImages = [ './img/cardtwo/Nintendo.png' , './img/cardtwo/NintendoSwtich.png.png'];
 var xboxImages = [ "./img/cards/xb1.png", "./img/cards/xb2.png", "./img/cards/xb3.png","./img/cards/xb4.png", ];
-let cardContainer = document.getElementById('card-container');
+let cardContainer = document.getElementById('modal');
+
 
 let items = [
 
@@ -38,6 +39,8 @@ let items = [
       catergory: console,
       button: "ButtonFour",
     }
+
+
 ]
 
 // function createNewItemXbox() {
@@ -48,35 +51,40 @@ let items = [
 // }
 // }
 
-// Generate Cards
+// createNewItemXbox()
 
 for (let i = 0; i < items.length; i++) {               
     const cards =  '<div class="jsgenerated-cards">' + '<img src="' + `${items[i].image}` + '">' + '<p class="card-heading">' + `${items[i].price}` + '</p>' +  '<div class="button" id="' + `${items[i].id}` + '" onclick="createNewItem(this.id)">' + '<p class="card-heading-one">Buttons</p>' + '</div>' + '</div>' 
     cardContainer.innerHTML +=  cards;
 }
 
-// Create Items on addtocart
+const buttons = document.getElementsByClassName('button');
+let listContainer = document.getElementById('list')
 
-let listContainer = document.getElementById('list-box')
+
 function createNewItemXbox() {
+  
   const list =  '<div class="list">' + '<img src="' + `${items[0].image}` + '" width=100px >' + '<p class="card-heading-two">' + `${items[0].price}` + '</p>' + '<div class="button">' + '<p class="card-price">Button</p>' + '</div>' + '</div>' 
   listContainer.innerHTML +=  list;
+ 
 }
+
+
+const cards = document.getElementsByClassName('card-heading-two');
+const remove = document.getElementsByClassName('button');
 
 function createNewItem(clicked_id) {
-  const list =  '<div class="list">' + '<img src="' + `${items[clicked_id].image}` + '" width=100px >' + '<p class="card-heading-two">' + `${items[clicked_id].price}` + '</p>' + '<div class="button" id="' + `${items[clicked_id].id}` + '" + onclick="removeItem()">' + '<p class="card-price">Remove</p>' + '</div>' + '</div>' 
+  const list =  '<div class="list">' + '<img src="' + `${items[clicked_id].image}` + '" width=100px >' + '<p class="card-heading-two">' + `${items[clicked_id].price}` + '</p>' + '<div class="button" id="' + `${items[clicked_id].id}` + '" + onclick="removeItem(this.id)">' + '<p class="card-price">Remove</p>' + '</div>' + '</div>' 
   listContainer.innerHTML +=  list;
-
-//   var button = document.createElement("BUTTON");
-//   document.getElementById("list-box").appendChild(button);
-//   button.addEventListener('click', function removeList() {
-//    document.getElementById("list-box").removeChild(button);
-// })
+  console.log(clicked_id)
 }
 
-function removeItem() {
-  document.getElementById("list-box").removeChild(list);
 
+function removeItem(clicked_id) {
+  
+  const items = document.getElementsByClassName("list");
+  items[clicked_id].remove();
+  console.log(clicked_id)
 }
 
 
@@ -208,159 +216,3 @@ function removeItem() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function imgloop()
-// {
-//   var ar = [];
-//   ar.push("./img/cards/ps4.png");
-//   ar.push("./img/cards/ps2.png");
-//   ar.push("./img/cards/ps1.png");
-
-//   for (i = 0; ar.length > i; i++)
-//   {
-//     var img = new Image(200, 200);
-//     img.src = ar[i];
-//     var src = document.getElementById("elementid");
-//     // var src = document.querySelectorAll('.image-box');
-//     src.appendChild(img);
-//   }
-
-// }
-  
-// function imgloop()
-// {
-//   var ar = [];
-//   ar.push("./img/cards/ps4.png");
-//   ar.push("./img/cards/ps2.png");
-//   ar.push("./img/cards/ps1.png");
-
-//   for (i = 0; ar.length > i; i++)
-//   {
-//     var img = new Image(200, 200);
-//     img.src = ar[i];
-//     var src = document.getElementById("elementid");
-//     // var src = document.querySelectorAll('.image-box');
-//     src.appendChild(img);
-//   }
-
-// }
-
-
-// const boxes = document.querySelectorAll('.image-box');
-
-
-// for (let i = 0; i < boxes.length; i++) {
-//   // boxes[i].style.backgroundColor = "blue";
-// }
-
-
-
-
-// //  
-
-
-// let div = document.createElement("div")
-// let p = document.createElement("p")
-// div.append("Some text", p)
-
-
-
-
-// function myFunction() {
-//   const boxes = document.querySelectorAll('image-box');
-
-//   for (let i = 0; i < boxes.length; i++) {
-//   var x = document.createElement("IMG");
-//   x.setAttribute("src", images[0]);
-//   x.setAttribute("alt", "ps5");
-//   boxes.appendChild(x);
-//   }
-//  }
-
-
-// // function myFunction() {
-
-// //   var x = document.createElement("IMG");
-// //    x.setAttribute("src", images[0]);
-// //    x.setAttribute("alt", "ps5");
-// //    document.getElementById('box').appendChild(x);
-// // }
-
-
-
-// myFunction()
-
-
-
-
-
-
-// // function createImage () {
-// //   var img = document.createElement('img');
-// //   img.src = images[0]
-// //   document.getElementById('box-one').appendChild(img);
-// //   down.innerHTML = "Image Element Added.";
-// // }
-// // createImage()
-
-
-// // // let imageHolder = document.getElementsByClassName(".image-box").document.body.appendChild(x);
-
-
-// // function myFunction() {
-// //   var x = document.createElement("IMG");
-// //   // let imageHolder = document.getElementsById("ronan")
-// //   x.setAttribute("src", images[0]);
-// //   // x.setAttribute("width", "304");
-// //   // x.setAttribute("height", "228");
-// //    x.setAttribute("alt", "ps5");
-// //   //  document.body.appendChild(x);
-// //    document.getElementById('ronan').appendChild(x);
-// // }
