@@ -18,51 +18,61 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 fixed-top">
     <div class="container">
+
+<div class="logo-section">
+
       <a href="#" class="navbar-brand">
         <h6>LIZARD INTERACTIVE</h6>
       </a>
+      <div class="icon" id="icon">
+      <img src="./img/cart.png" width="30" height="30" alt="cart">
+    </div>
+  </div>
       <button class="navbar-toggler  bg-light " type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse bg-light navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <a href="#playstation" class="nav-link text-dark">
               <h6>Playstation</h6>
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <a href="#xbox" class="nav-link text-dark">
               <h6>Xbox</h6>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <a href="#switch" class="nav-link text-dark">
               <h6>Nintendo Switch</h6>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <a href="#questions" class="nav-link text-">
               <h6>PC Games</h6>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <a href="#instructors" class="nav-link text-light">
               <h6>Classic Consoles</h6>
             </a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-dark rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              View Cart
+             <button class="addtocart" data-bs-toggle="collapse" data-bs-target="#navmenu" id="myBtn">
+               View Cart 
+             
             </button>
+     
           </li>
         </ul>
       </div>
 
     </div>
   </nav>
+
 
   <!-- Lizard Interactive Hero Section -->
 
@@ -79,19 +89,15 @@
   <!-- <img src="./img/hero/switch.png" alt="hero" width="500"> -->
 
 
-  </div>
-  </div>
-  </section> -->
-
   <!-- Lizard Interactive Latest Consoles and  Section -->
 
   <p class="heading-one">
     LAtest consoles & accessories
   </p>
 
-  <!-- Lizard Interactive Slideshow PS Section -->
-  <!-- <section class="slideshow-section" id="playstation">
+  <!-- Lizard Interactive Slideshow PS Section  -->
 
+   <section class="slideshow-section" id="playstation">
   <div class="slideshow-container">
 
     <div id="ps5" class="carousel slide carousel-dark slide" data-bs-ride="carousel">
@@ -121,147 +127,80 @@
       </button>
     </div>
   </div>
-</section> -->
+</section> 
 
-  <!-- Lizard Interactive Store Cards Section -->
 
-  <section class="carousel-section">
-    <div class="store-cards-container">
+<!-- Lizard Interactive Store Cards Section  -->
 
-      <div class="card-container">
-          <img  class="shop-item-image" src="./img/cards/xb2.png" alt="hero" width="300">
-        <p class="card-heading">
-          Playstation 5
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
+<section class="container content-section">
+  
+  <div class="shop-items">
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/xb3.png">
+        <span class="shop-item-title">Gaming Consoles</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
           </div>
-        </div>
       </div>
 
-      <div class="card-container">
-          <img class="shop-item-image" src="./img/cards/xb3.png" alt="hero" width="300">
-        <p class="card-heading">
-          accessories
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button" onclick="createNewItemXbox()">
-            <p class="card-order-button">
-              order
-            </p>
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/xb1.png">
+        <span class="shop-item-title">Accessories</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button"type="button">BUY</button>
           </div>
-        </div>
       </div>
 
-      <div class="card-container">
-     
-          <img class="shop-item-image" src="./img/cards/xb1.png" alt="hero" width="300">
-          <p class="card-heading">
-            PS5 controllers
-          </p>
-          <p class="card-heading-two">
-            Free 2 months Xbox Live Membership and more
-          </p>
-
-          <div class="card-bottom-content">
-            <p class="card-price">
-              PhP 15,000.00
-            </p>
-            <div class="button">
-              <p class="card-order-button">
-                order
-              </p>
-            </div>
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/xb2.png">
+        <span class="shop-item-title">membership</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
           </div>
-  </section>
+      </div>
 
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/xb1.png">
+        <span class="shop-item-title">Controllers</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
+          </div>
+      </div>
 
-   
+  </div>
+</section>
 
+<section class="modal-section">
 
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="cart-modal" id="myModal">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Checkout Item/s</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="cart-heading">Checkout</h1>
+        <button type="button" class="btn-close" id="addtocartclose" aria-label="Close"></button>
       </div>
-
-
       <div class="modal-body">
-        
-<div class="modal-content">
-
-    <div class="cart-row">
-        <span class="cart-item cart-header cart-column">ITEM</span>
-        <span class="cart-price cart-header cart-column">PRICE</span>
-        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-    </div>
-    <div class="cart-items">
-    </div>
-    <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$0</span>
-    </div>
-    <!-- <button class="btn btn-primary btn-purchase col-3" type="button">PURCHASE</button> -->
-  </div>
-
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="model-bottom-content">
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">PhP 0</span>
+        </div>
+        <button class="btn btn-dark btn-purchase" type="button">PURCHASE</button>
       </div>
-
-
-      <div class="modal-footer">
-         <button class="btn btn-primary btn-purchase col-3" type="button">PURCHASE</button>
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</section>
 
   <!-- Lizard Interactive Slideshow XBOX Section -->
 
