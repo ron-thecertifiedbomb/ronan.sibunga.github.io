@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://kit.fontawesome.com/b4f3b8c452.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+ 
   <title>Lizard Interactive</title>
 </head>
 
@@ -18,10 +20,16 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 fixed-top">
     <div class="container">
+
+<div class="logo-section">
+
       <a href="#" class="navbar-brand">
-        <!-- <img class="image-logo" src="./img/NavBar.png" alt="logo" width="151px" /> -->
         <h6>LIZARD INTERACTIVE</h6>
       </a>
+      <div class="icon" id="icon">
+      <img src="./img/cart.png" width="30" height="30" alt="cart">
+    </div>
+  </div>
       <button class="navbar-toggler  bg-light " type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,32 +41,40 @@
               <h6>Playstation</h6>
             </a>
           </li>
-          
-          <li class="nav-item">
+
+          <li class="nav-item" >
             <a href="#xbox" class="nav-link text-dark">
               <h6>Xbox</h6>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a href="#switch" class="nav-link text-dark">
               <h6>Nintendo Switch</h6>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a href="#questions" class="nav-link text-">
               <h6>PC Games</h6>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a href="#instructors" class="nav-link text-light">
               <h6>Classic Consoles</h6>
             </a>
+          </li>
+          <li class="nav-item">
+             <button class="addtocart" id="myBtn">
+               View Cart 
+             
+            </button>
+     
           </li>
         </ul>
       </div>
 
     </div>
   </nav>
+
 
   <!-- Lizard Interactive Hero Section -->
 
@@ -70,11 +86,6 @@
         <p class="hero-heading-two">Online Store</p>
       </div>
       <div class="hero-column-two">
-        <!-- <img src="./img/hero/xbox.png" alt="hero" width="500">
-        <img src="./img/hero/ps5.png" alt="hero" width="500"> -->
-        <!-- <img src="./img/hero/switch.png" alt="hero" width="500"> -->
-
-
       </div>
     </div>
   </section>
@@ -85,9 +96,9 @@
     LAtest consoles & accessories
   </p>
 
- <!-- Lizard Interactive Slideshow PS Section -->
- <section class="slideshow-section" id="playstation">
+  <!-- Lizard Interactive Slideshow PS Section  -->
 
+   <section class="slideshow-section" id="playstation">
   <div class="slideshow-container">
 
     <div id="ps5" class="carousel slide carousel-dark slide" data-bs-ride="carousel">
@@ -117,100 +128,79 @@
       </button>
     </div>
   </div>
+</section> 
+
+
+<!-- Lizard Interactive Store Cards Section  -->
+
+<section class="container content-section">
+  
+  <div class="shop-items">
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/ps4.png">
+        <span class="shop-item-title">Gaming Consoles</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
+          </div>
+      </div>
+
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/ps2.png">
+        <span class="shop-item-title">Accessories</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button"type="button">BUY</button>
+          </div>
+      </div>
+
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/ps3.png">
+        <span class="shop-item-title">membership</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
+          </div>
+      </div>
+
+      <div class="shop-item">
+        <img class="shop-item-image" src="./img/cards/ps1.png">
+        <span class="shop-item-title">PS5 Controllers</span>
+          <div class="shop-item-details">
+              <span class="shop-item-price">₱35000</span>
+              <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
+          </div>
+      </div>
+
+  </div>
 </section>
 
-
-  <!-- Lizard Interactive Cards/Carousel Section -->
-
-  <section class="carousel-section">
-    <div class="carousel-container">
-
-      <div class="card-version-three">
-        <img src="./img/cards/ps4.png" alt="hero" width="300">
-
-        <p class="card-heading">
-          PS 5 consoles
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
-        </div>
-
+<section class="modal-section">
+<div class="cart-modal" id="myModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="cart-heading">Checkout</h1>
+        <button type="button" class="btn-close" id="addtocartclose" aria-label="Close"></button>
       </div>
-
-      <div class="card-version-three">
-        <img src="./img/cards/ps2.png" alt="hero" width="300">
-        <p class="card-heading">
-          accessories
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
+      <div class="modal-body">
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
         </div>
-      </div>
-
-      <div class="card-version-three">
-        <img src="./img/cards/ps3.png" alt="hero" width="300">
-        <p class="card-heading">
-          PS5 controllers
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership and more
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
+        <div class="cart-items">
         </div>
-      </div>
-
-      <div class="card-version-three">
-        <img src="./img/cards/ps1.png" alt="hero" width="300">
-        <p class="card-heading">
-          free online membership
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
+        <div class="model-bottom-content">
+        <div class="cart-total">
+            <strong class="cart-total-title">Total Amount</strong>
+            <span class="cart-total-price">PhP 0</span>
         </div>
+        <button class="btn btn-dark btn-purchase" type="button">PURCHASE</button>
       </div>
-  </section>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Lizard Interactive Slideshow XBOX Section -->
 
@@ -246,99 +236,49 @@
       </div>
     </div>
   </section>
-
-
-  <section class="carousel-section">
-    <div class="carousel-container">
-
-      <div class="card-version-three">
-        <img src="./img/cards/xb2.png" alt="hero" width="300">
-
-        <p class="card-heading">
-          XBOX SERIES S
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
+   <section class="container content-section">
+  
+    <div class="shop-items">
+        <div class="shop-item">
+          <img class="shop-item-image" src="./img/cards/xb1.png">
+          <span class="shop-item-title">Xbox Consoles</span>
+            <div class="shop-item-details">
+                <span class="shop-item-price">₱35000</span>
+                <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
+            </div>
         </div>
-
-      </div>
-
-      <div class="card-version-three">
-        <img src="./img/cards/xb1.png" alt="hero" width="300">
-        <p class="card-heading">
-          XBOX CONSOLES
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
+  
+        <div class="shop-item">
+          <img class="shop-item-image" src="./img/cards/xb2.png">
+          <span class="shop-item-title">Xbox-Accessories</span>
+            <div class="shop-item-details">
+                <span class="shop-item-price">₱35000</span>
+                <button class="btn btn-primary-add shop-item-button"type="button">BUY</button>
+            </div>
         </div>
-      </div>
-
-      <div class="card-version-three">
-        <img src="./img/cards/xb3.png" alt="hero" width="300">
-        <p class="card-heading">
-          XBOX ACCESSORIES
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership and more
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
+  
+        <div class="shop-item">
+          <img class="shop-item-image" src="./img/cards/xb3.png">
+          <span class="shop-item-title">Xbox Live</span>
+            <div class="shop-item-details">
+                <span class="shop-item-price">₱35000</span>
+                <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
+            </div>
         </div>
-      </div>
-
-      <div class="card-version-three">
-        <img src="./img/cards/xb4.png" alt="hero" width="300">
-        <p class="card-heading">
-          XBOX CONTROLLERS
-        </p>
-        <p class="card-heading-two">
-          Free 2 months Xbox Live Membership
-        </p>
-
-        <div class="card-bottom-content">
-          <p class="card-price">
-            PhP 15,000.00
-          </p>
-          <div class="button">
-            <p class="card-order-button">
-              order
-            </p>
-          </div>
+  
+        <div class="shop-item">
+          <img class="shop-item-image" src="./img/cards/xb4.png">
+          <span class="shop-item-title">xbox-Controllers</span>
+            <div class="shop-item-details">
+                <span class="shop-item-price">₱35000</span>
+                <button class="btn btn-primary-add shop-item-button" type="button">BUY</button>
+            </div>
         </div>
-      </div>
-  </section>
-
-<!-- Lizard Interactive Slideshow Nintendo Section -->
+  
+    </div>
+  </section> 
+  
+  <!-- Lizard Interactive Slideshow Nintendo Section -->
 
   <section class="slideshow-section" id="switch">
 
@@ -372,25 +312,94 @@
       </div>
     </div>
   </section>
+ 
+<footer>
+<div class="footer-container">
+<div class="footer-columns-container">
+  <div class="footer-columns">
+    <ul>
+      <li class="footer-font-h1">
+        About Us
+      </li>
+      <li class="footer-font-h2">
+        Terms and Conditions
+      </li>
+      <li class="footer-font-h2">
+        Privacy Policy
+      </li>
+      <li class="footer-font-h2">
+        Refund Policy
+      </li>
+      <li class="footer-font-h2">
+        Cookie Policy
+      </li>
+      <li class="footer-font-h2">
+        Disclaimer
+      </li>
+    </ul>
+ 
+  </div>
+  <div class="footer-columns">
+    <ul>
+      <li class="footer-font-h1">
+        Contact Us
+      </li>
+      <li class="footer-font-h2">
+        ronan.sibunga.lizardinteractive@gmail.com
+      </li>
+      <li class="footer-font-h2">
+        Brgy, Ciudad Real, CSJDM, Bulacan, 3023
+        
+ 
+      </li>
+  
+    </ul>
+    <div class="icons">
+      <i class="fa-brands fa-facebook fa-lg" ></i>
+      <i class="fa-brands fa-linkedin fa-lg" ></i>
+      <i class="fa-brands fa-twitter fa-lg" ></i>
+      <i class="fa-brands fa-github fa-lg"></i>
+      <i class="fa-brands fa-youtube fa-lg"></i>
+    </div>
+   
+  </div>
+  <div class="footer-columns">
+    <ul>
+      <li class="footer-font-h1">
+        Subscribe and join our community
+      </li>
+      <li class="footer-font-h3">
+        We often send free tutorials, updates and discounts on future courses. Jump on board, you will love it.
+      </li>
+    </ul>
+  </div>
+  <div class="footer-columns">
 
+ <div class="emai-section">
+  <input class="email-input" type="input" placeholder="">
+  <div class="button-container"><p class="button-label">Subscribe</p></div>
 
+ </div>
+  </div>
+</div>
 
+<div class="footer-bottom-content">
+  <img src="./img/logo.png" alt="log" width="46">
 
-
-
-
-
+ <p class="footer-font-h3">©2014 –2023 Lizard Interactive Gaming Store </p>
+</div>
+</footer>
 
 
   <!-- Lizard Interactive Card Two Section -->
 
-  <section class="card-two">
+  <!-- <section class="card-two">
     <div class="card-two-container">
-      <div class="card-version-two">
-        <!-- <img src="./img/cardtwo/Nintendo.png" alt="nintendo"> -->
-    <img src="./img/cardtwo/NintendoPS.png" alt="nintendo"> 
-        <!-- <img src="./img/cardtwo/NintendoLarge.png" alt="nintendo" width="280"> -->
-        <div class="card-content">
+      <div class="card-version-two"> -->
+  <!-- <img src="./img/cardtwo/Nintendo.png" alt="nintendo"> -->
+  <!-- <img src="./img/cardtwo/NintendoPS.png" alt="nintendo">  -->
+  <!-- <img src="./img/cardtwo/NintendoLarge.png" alt="nintendo" width="280"> -->
+  <!-- <div class="card-content">
           <p class="card-heading">
             nintendo switch
           </p>
@@ -414,13 +423,13 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
 
-      <div class="card-version-two">
-        <img src="./img/cardtwo/NintendoSwtich.png" alt="nintendo">
-    <!-- <img src="./img/cardtwo/NintendoPS.png" alt="nintendo"> --> 
-        <!-- <img src="./img/cardtwo/NintendoLarge.png" alt="nintendo" width="287"> -->
-        <div class="card-content">
+  <!-- <div class="card-version-two">
+        <img src="./img/cardtwo/NintendoSwtich.png" alt="nintendo"> -->
+  <!-- <img src="./img/cardtwo/NintendoPS.png" alt="nintendo"> -->
+  <!-- <img src="./img/cardtwo/NintendoLarge.png" alt="nintendo" width="287"> -->
+  <!-- <div class="card-content">
           <p class="card-heading">
             nintendo switch
           </p>
@@ -444,12 +453,14 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-
+ 
   <script>
     mapboxgl.accessToken =
       'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
