@@ -74,10 +74,24 @@ h6:hover {
   /* background-color: #706b6b; */
 }
 
+.counter-wrapper {
+  position: absolute;
+  right: 0;
+  background-color: red;
+  width: 18px;
+  border-radius: 50px;
+text-align: center;
+  color: var(--bglightmode);
+  top: 0;
+  font-size: 11px; 
+}
+
 .icon {
   display: flex;
+  position: relative;
   padding-top: 5px;
   display: none;
+  width: 40px;
 }
 
 .addtocart {
@@ -374,6 +388,7 @@ Lizard Interactive Card Two Section  */
   .icon {
     display: block;
     cursor: pointer;
+    
   }
 
   .addtocart {
@@ -415,7 +430,7 @@ Lizard Interactive Card Two Section  */
 
   .font {
     background-color: #000000;
-    background:rgba(0, 0, 0, 0.8);
+    background:rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     padding: 10px;
   }
@@ -788,10 +803,11 @@ cursor: pointer;
 
 }
 
-.icons {
+.icon {
   display: flex;
-  gap: 20px;
-  margin-top: 18px;
+  gap: 1px;
+  display: none;
+
 }
 
 .footer-columns:nth-child(1) {
@@ -937,5 +953,11 @@ align-content: center;
     height: 45px;
   }
 
+  .icon {
+    display: block;
+ 
+  }
+
 
 }
+

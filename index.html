@@ -27,7 +27,7 @@
         <h6>LIZARD INTERACTIVE</h6>
       </a>
       <div class="icon" id="icon">
-      <img src="./img/cart.png" width="30" height="30" alt="cart">
+      <img src="./img/cart.png" width="30" height="30" alt="cart"> <div class="counter-wrapper" id="counter-wrapper"><span id="counter"></span></div>
     </div>
   </div>
       <button class="navbar-toggler  bg-light " type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -64,7 +64,7 @@
           </li>
           <li class="nav-item">
              <button class="addtocart" id="myBtn">
-               View Cart 
+               Cart <span>(</span><span id="nav-counter">0</span><span>)</span>
              
             </button>
      
@@ -77,7 +77,7 @@
 
 
   <!-- Lizard Interactive Hero Section -->
-
+  
   <section class="hero-section">
 
     <div class="hero-wrapper">
@@ -93,7 +93,7 @@
   </section>
 
   <!-- Lizard Interactive Latest Consoles and  Section -->
-
+  
   <p class="heading-one">
     LAtest consoles & accessories
   </p>
@@ -181,7 +181,7 @@
 <div class="cart-modal" id="myModal">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="cart-heading">Checkout</h1>
+        <h1 class="cart-heading" id="cart-heading"></h1>
         <button type="button" class="btn-close" id="addtocartclose" aria-label="Close"></button>
       </div>
       <div class="modal-body">

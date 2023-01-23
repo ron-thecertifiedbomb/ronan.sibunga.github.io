@@ -3,6 +3,21 @@ if (document.readyState == 'loading') {
 } else {
     ready()
 }
+var counterBox =document.getElementById("counter-wrapper")
+var itemsOnCart = document.getElementsByClassName('cart-item-title')
+var items = itemsOnCart.length
+let heading;
+
+if (items === 0) {
+    heading = "No item/s added to cart yet!";
+    counterBox.style.display = "none";
+} else {
+    heading = "Checkout";
+    counterBox.style.display = "block";
+}
+document.getElementById("cart-heading").innerHTML = heading;
+console.log(items)
+
 
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-dark')
@@ -17,13 +32,16 @@ function ready() {
         input.addEventListener('change', quantityChanged)
     }
 
+
     var addToCartButtons = document.getElementsByClassName('shop-item-button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+
 }
+
 
 function purchaseClicked() {
     alert('Thank you for your purchase')
@@ -32,13 +50,34 @@ function purchaseClicked() {
         cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
-    
+
 }
 
 function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
+    var removeItemNames = document.getElementsByClassName('cart-item-title')
+    var removeNumberItemNames = removeItemNames.length
+    console.log(removeNumberItemNames)
+    document.getElementById("counter").innerHTML = removeNumberItemNames
+    document.getElementById("nav-counter").innerHTML = removeNumberItemNames
+
+    var counterContainer = document.getElementById('counter-wrapper')
+    var itemsOnCart = document.getElementsByClassName('cart-item-title')
+    var items = itemsOnCart.length
+    let heading;
+
+    if (items === 0) {
+        heading = "No item/s added to cart yet!";
+        counterContainer.style.display= 'none'
+    } else {
+        heading = "Checkout";
+        counterContainer.style.display= 'block'
+    }
+    document.getElementById("cart-heading").innerHTML = heading;
+    console.log(items)
+
 }
 
 function quantityChanged(event) {
@@ -47,6 +86,7 @@ function quantityChanged(event) {
         input.value = 1
     }
     updateCartTotal()
+
 }
 
 function addToCartClicked(event) {
@@ -70,8 +110,17 @@ function addItemToCart(title, price, imageSrc) {
             alert('This item is already added to the cart')
             return
         }
-       
     }
+
+    function cartNumberofItems() {
+        var cartNumberofItems = cartItemNames.length
+        console.log(cartNumberofItems)
+        document.getElementById("counter").innerHTML = cartNumberofItems
+        document.getElementById("nav-counter").innerHTML = cartNumberofItems
+
+    }
+
+
     var cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
@@ -86,8 +135,26 @@ function addItemToCart(title, price, imageSrc) {
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-dark')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
-    
+    cartNumberofItems();
+
+    var counterWrapper = document.getElementById('counter-wrapper')
+    var itemsOnCart = document.getElementsByClassName('cart-item-title')
+    var items = itemsOnCart.length
+    let heading;
+
+    if (items === 0) {
+        heading = "No item/s added to cart yet!";
+        counterWrapper.style.display = "none";
+    } else {
+        heading = "Checkout";
+    }
+    document.getElementById("cart-heading").innerHTML = heading;
+    counterWrapper.style.display = "block";
+    console.log(items)
 }
+
+
+
 
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
@@ -103,6 +170,7 @@ function updateCartTotal() {
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '₱' + total
+
 }
 
 
@@ -116,21 +184,21 @@ var icon = document.getElementById("icon");
 var span = document.getElementById("addtocartclose");
 
 
-btn.onclick = function() {
-  modal.style.display = "block";
+btn.onclick = function () {
+    modal.style.display = "block";
 }
 
-icon.onclick = function() {
-  modal.style.display = "block";
+icon.onclick = function () {
+    modal.style.display = "block";
 }
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
+span.onclick = function () {
     modal.style.display = "none";
-  }
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 
