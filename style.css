@@ -407,13 +407,22 @@ Lizard Interactive Card Two Section  */
 }
 
 @media only screen and (max-width: 428px) {
-  .hero-heading-one {
+  .hero-heading-one, .hero-heading-two {
     line-height: 25px;
     color: white;
+   
+  }
+
+  .font {
+    background-color: #000000;
+    background:rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 10px;
   }
 
   .hero-heading-two {
-    color: white;
+    color: white; 
+   
   }
 
   .hero-column-two {
