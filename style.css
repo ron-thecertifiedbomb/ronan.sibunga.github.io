@@ -796,6 +796,8 @@ footer {
 }
 
 
+
+
 .fa-facebook, .fa-linkedin, .fa-twitter, .fa-github, .fa-youtube {
   color: #BABABA;
 cursor: pointer;
@@ -805,7 +807,7 @@ cursor: pointer;
 
 .icon {
   display: flex;
-  gap: 1px;
+  gap: 2px;
   display: none;
 
 }
@@ -961,3 +963,10 @@ align-content: center;
 
 }
 
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  cursor: pointer;
+}

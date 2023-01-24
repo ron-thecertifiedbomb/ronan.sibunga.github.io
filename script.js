@@ -42,15 +42,23 @@ function ready() {
 
 }
 
-
 function purchaseClicked() {
+    var totalCount = document.getElementById("counter").innerHTML = '0'
+    var totalCounter = document.getElementById("nav-counter").innerHTML = '0'
+    var resetCounterBox =document.getElementById("counter-wrapper")
+    if (totalCount || totalCounter === 0) {
+        
+        resetCounterBox.style.display = "none";
+    } else {
+       
+        resetCounterBox.style.display = "block";
+    }
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
-    updateCartTotal()
-
+    updateCartTotal()    
 }
 
 function removeCartItem(event) {
@@ -117,10 +125,8 @@ function addItemToCart(title, price, imageSrc) {
         console.log(cartNumberofItems)
         document.getElementById("counter").innerHTML = cartNumberofItems
         document.getElementById("nav-counter").innerHTML = cartNumberofItems
-
     }
-
-
+    
     var cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
@@ -135,8 +141,8 @@ function addItemToCart(title, price, imageSrc) {
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-dark')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+   
     cartNumberofItems();
-
     var counterWrapper = document.getElementById('counter-wrapper')
     var itemsOnCart = document.getElementsByClassName('cart-item-title')
     var items = itemsOnCart.length
