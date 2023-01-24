@@ -3,7 +3,11 @@ if (document.readyState == 'loading') {
 } else {
     ready()
 }
-var counterBox =document.getElementById("counter-wrapper")
+
+
+function mylogic() {
+    
+    var counterBox =document.getElementById("counter-wrapper")
 var itemsOnCart = document.getElementsByClassName('cart-item-title')
 var items = itemsOnCart.length
 let heading;
@@ -18,6 +22,11 @@ if (items === 0) {
 document.getElementById("cart-heading").innerHTML = heading;
 console.log(items)
 
+}
+
+mylogic()
+
+// document.getElementById('addtocartcloseTwo').style.display="none"
 
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-dark')
@@ -32,7 +41,6 @@ function ready() {
         input.addEventListener('change', quantityChanged)
     }
 
-
     var addToCartButtons = document.getElementsByClassName('shop-item-button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
@@ -42,25 +50,50 @@ function ready() {
 
 }
 
+
+
+
+
+
 function purchaseClicked() {
 
+    
     var totalCount = document.getElementById("counter").innerHTML = '0'
     var totalCounter = document.getElementById("nav-counter").innerHTML = '0'
-    document.getElementById("cart-heading").innerHTML = "Thank You!";
+    var cartHeading =document.getElementById("cart-heading").innerHTML = "Thank You!";
+    
+
+
     document.getElementById("purchase-button").style.display = "none";
     var resetCounterBox =document.getElementById("counter-wrapper")
     if (totalCount || totalCounter === 0) {
-        resetCounterBox.style.display = "none";
-     
+        resetCounterBox.style.display = "none";   
     } else {
         resetCounterBox.style.display = "block";
     }
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
+         
     }
-    updateCartTotal()    
+    updateCartTotal()
+    closeButton()
 }
+
+
+
+var cartHeading = document.getElementById("cart-heading").textContent
+
+console.log(cartHeading)
+
+
+
+
+
+
+
+
+
 
 function removeCartItem(event) {
     var buttonClicked = event.target
@@ -72,7 +105,7 @@ function removeCartItem(event) {
     document.getElementById("counter").innerHTML = removeNumberItemNames
     document.getElementById("nav-counter").innerHTML = removeNumberItemNames
 
-    
+
     var counterContainer = document.getElementById('counter-wrapper')
     var itemsOnCart = document.getElementsByClassName('cart-item-title')
     var items = itemsOnCart.length
@@ -189,31 +222,56 @@ var icon = document.getElementById("icon");
 var span = document.getElementById("addtocartclose");
 
 
-btn.onclick = function () {
-    modal.style.display = "block";
-    var counterContainer = document.getElementById('counter-wrapper')
+
+function logic() {
     var itemsOnCart = document.getElementsByClassName('cart-item-title')
     var items = itemsOnCart.length
-    let heading;
-
   var purchaseButton = document.getElementById('purchase-button')
   purchaseButton.style.display="none"
 
     if (items === 0) {
-        heading = "No item/s added to cart yet!";
-        counterContainer.style.display= 'none'
         purchaseButton.style.display="none"
     } else {
-        heading = "Checkout";
-        counterContainer.style.display= 'block'
         purchaseButton.style.display="block"
     }
-    document.getElementById("cart-heading").innerHTML = heading;
-    console.log(items)
+}
+
+function refreshPage() {
+    location.reload();
+}
+
+
+function closeButton() {
+
+    var addtocartOne = document.getElementById('addtocartclose')
+var addtocartTwo = document.getElementById('addtocartcloseTwo')
+var cartHeading = document.getElementById("cart-heading").textContent
+
+if (cartHeading === "Thank You!" ) {
+
+    addtocartTwo.style.display="block"
+    addtocartOne.style.display="none"
+} else {
+   
+    addtocartTwo.style.display="none"
+    addtocartOne.style.display="block"
+   
+}
+    console.log(cartHeading)
+
+}
+
+
+btn.onclick = function () {
+    modal.style.display = "block";
+    logic()
+    closeButton()
 }
 
 icon.onclick = function () {
     modal.style.display = "block";
+    logic()
+    closeButton()
 }
 span.onclick = function () {
     modal.style.display = "none";
