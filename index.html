@@ -177,32 +177,27 @@
   </div>
 </section>
 
-
-
-
-
-
-
 <section class="modal-section">
 <div class="cart-modal" id="myModal">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="cart-heading" id="cart-heading"></h1>
+        
         <button type="button" class="btn-close" id="addtocartclose" aria-label="Close"></button>
         <button type="button" class="btn-close" id="addtocartcloseTwo" aria-label="Close" onclick="refreshPage()"></button>
       </div>
+      <div class="header" id="header-text"><h1 class="cart-heading" id="cart-heading"></h1></div>
       <div class="modal-body">
-        <div class="cart-row">
+        <div class="cart-row" id="cart-row">
             <span class="cart-item cart-header cart-column">ITEM</span>
             <span class="cart-price cart-header cart-column">PRICE</span>
             <span class="cart-quantity cart-header cart-column">QUANTITY</span>
         </div>
         <div class="cart-items">
         </div>
-        <div class="model-bottom-content">
-        <div class="cart-total">
+        <div class="model-bottom-content" >
+        <div class="cart-total" id="modal-bottom-content">
             <strong class="cart-total-title">Total Amount</strong>
-            <span class="cart-total-price">PhP 0</span>
+            <span class="cart-total-price" id="price">PhP 0</span>
         </div>
         <button class="btn-purchase" type="button" id="purchase-button">PURCHASE</button>
       </div>

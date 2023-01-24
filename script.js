@@ -50,21 +50,18 @@ function ready() {
 
 }
 
-
-
-
-
-
 function purchaseClicked() {
 
-    
+
     var totalCount = document.getElementById("counter").innerHTML = '0'
     var totalCounter = document.getElementById("nav-counter").innerHTML = '0'
-    var cartHeading =document.getElementById("cart-heading").innerHTML = "Thank You!";
+    var cartHeading =document.getElementById("cart-heading").innerHTML = "Thank You for purchasing from our store!";
     
-
-
     document.getElementById("purchase-button").style.display = "none";
+    document.getElementById("cart-row").style.display = "none";
+    document.getElementById("modal-bottom-content").style.display = "none";
+    document.getElementById("cart-heading").style.textAlign= "center";
+
     var resetCounterBox =document.getElementById("counter-wrapper")
     if (totalCount || totalCounter === 0) {
         resetCounterBox.style.display = "none";   
@@ -73,17 +70,17 @@ function purchaseClicked() {
     }
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
-         
+        cartItems.removeChild(cartItems.firstChild)   
     }
     updateCartTotal()
     closeButton()
+
+    
+
 }
 
 
-
 var cartHeading = document.getElementById("cart-heading").textContent
-
 console.log(cartHeading)
 
 
@@ -135,6 +132,8 @@ function quantityChanged(event) {
 }
 
 function addToCartClicked(event) {
+    // document.getElementById("cart-row").style.display = "block";
+    // document.getElementById("modal-bottom-content").style.display = "block";
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
@@ -243,11 +242,11 @@ function refreshPage() {
 
 function closeButton() {
 
-    var addtocartOne = document.getElementById('addtocartclose')
+var addtocartOne = document.getElementById('addtocartclose')
 var addtocartTwo = document.getElementById('addtocartcloseTwo')
 var cartHeading = document.getElementById("cart-heading").textContent
 
-if (cartHeading === "Thank You!" ) {
+if (cartHeading === "Thank You for purchasing from our store!" ) {
 
     addtocartTwo.style.display="block"
     addtocartOne.style.display="none"

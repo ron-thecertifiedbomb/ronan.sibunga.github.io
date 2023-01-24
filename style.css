@@ -978,3 +978,7 @@ align-content: center;
   padding: 0.5rem;
   border-radius: 10px;
 }
+
+.header {
+  padding-left: 1rem;
+}
