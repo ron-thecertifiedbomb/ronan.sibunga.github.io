@@ -47,7 +47,7 @@ function purchaseClicked() {
     var totalCount = document.getElementById("counter").innerHTML = '0'
     var totalCounter = document.getElementById("nav-counter").innerHTML = '0'
     document.getElementById("cart-heading").innerHTML = "Thank You!";
-
+    document.getElementById("purchase-button").style.display = "none";
     var resetCounterBox =document.getElementById("counter-wrapper")
     if (totalCount || totalCounter === 0) {
         resetCounterBox.style.display = "none";
@@ -72,6 +72,7 @@ function removeCartItem(event) {
     document.getElementById("counter").innerHTML = removeNumberItemNames
     document.getElementById("nav-counter").innerHTML = removeNumberItemNames
 
+    
     var counterContainer = document.getElementById('counter-wrapper')
     var itemsOnCart = document.getElementsByClassName('cart-item-title')
     var items = itemsOnCart.length
@@ -80,9 +81,11 @@ function removeCartItem(event) {
     if (items === 0) {
         heading = "No item/s added to cart yet!";
         counterContainer.style.display= 'none'
+        document.getElementById("purchase-button").style.display = "none";
     } else {
         heading = "Checkout";
         counterContainer.style.display= 'block'
+        document.getElementById("purchase-button").style.display = "block";
     }
     document.getElementById("cart-heading").innerHTML = heading;
     console.log(items)
@@ -188,18 +191,22 @@ var span = document.getElementById("addtocartclose");
 
 btn.onclick = function () {
     modal.style.display = "block";
-    
     var counterContainer = document.getElementById('counter-wrapper')
     var itemsOnCart = document.getElementsByClassName('cart-item-title')
     var items = itemsOnCart.length
     let heading;
 
+  var purchaseButton = document.getElementById('purchase-button')
+  purchaseButton.style.display="none"
+
     if (items === 0) {
         heading = "No item/s added to cart yet!";
         counterContainer.style.display= 'none'
+        purchaseButton.style.display="none"
     } else {
         heading = "Checkout";
         counterContainer.style.display= 'block'
+        purchaseButton.style.display="block"
     }
     document.getElementById("cart-heading").innerHTML = heading;
     console.log(items)
