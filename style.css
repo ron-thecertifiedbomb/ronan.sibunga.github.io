@@ -970,3 +970,11 @@ align-content: center;
   margin-top: 1rem;
   cursor: pointer;
 }
+
+.btn-purchase {
+  background-color: var(--bgdarktmode);
+  border: none;
+  color: var(--bglightmode);
+  padding: 0.5rem;
+  border-radius: 10px;
+}

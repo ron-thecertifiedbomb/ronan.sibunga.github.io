@@ -43,17 +43,18 @@ function ready() {
 }
 
 function purchaseClicked() {
+
     var totalCount = document.getElementById("counter").innerHTML = '0'
     var totalCounter = document.getElementById("nav-counter").innerHTML = '0'
+    document.getElementById("cart-heading").innerHTML = "Thank You!";
+
     var resetCounterBox =document.getElementById("counter-wrapper")
     if (totalCount || totalCounter === 0) {
-        
         resetCounterBox.style.display = "none";
+     
     } else {
-       
         resetCounterBox.style.display = "block";
     }
-    alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
@@ -107,7 +108,6 @@ function addToCartClicked(event) {
     updateCartTotal()
 }
 
-
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
@@ -160,8 +160,6 @@ function addItemToCart(title, price, imageSrc) {
 }
 
 
-
-
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
@@ -182,8 +180,6 @@ function updateCartTotal() {
 
 // Modal Function
 
-
-
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var icon = document.getElementById("icon");
@@ -192,6 +188,21 @@ var span = document.getElementById("addtocartclose");
 
 btn.onclick = function () {
     modal.style.display = "block";
+    
+    var counterContainer = document.getElementById('counter-wrapper')
+    var itemsOnCart = document.getElementsByClassName('cart-item-title')
+    var items = itemsOnCart.length
+    let heading;
+
+    if (items === 0) {
+        heading = "No item/s added to cart yet!";
+        counterContainer.style.display= 'none'
+    } else {
+        heading = "Checkout";
+        counterContainer.style.display= 'block'
+    }
+    document.getElementById("cart-heading").innerHTML = heading;
+    console.log(items)
 }
 
 icon.onclick = function () {
